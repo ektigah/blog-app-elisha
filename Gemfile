@@ -6,7 +6,14 @@ ruby '2.5.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+group :development, :test do
+ gem 'sqlite3' , '~> 1.3.13'
+end
+
+group :production do
+  gem 'pg'
+end
 
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', '~> 4.1'
